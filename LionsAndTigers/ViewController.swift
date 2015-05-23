@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myImage: UIImageView!
     
     var myTigers:[Tiger] = []
-    var shownTigers:[Tiger] = []
+    var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +28,21 @@ class ViewController: UIViewController {
         firstTiger.Age = 1
         firstTiger.Breed = "Bengal"
         firstTiger.image = UIImage(named: "BengalTiger.jpg")
+        firstTiger.chuff()
         
         var secondTiger = Tiger()
         secondTiger.name = "Alcyone"
-        secondTiger.Age = 1
+        secondTiger.Age = Tiger.ageOfTigersInTigerYears(3)
         secondTiger.Breed = "Bengal"
         secondTiger.image = UIImage(named: "MalayanTiger.jpg")
+        secondTiger.chuffNumberOfTimes(5)
         
         var thirdTiger = Tiger()
         thirdTiger.name = "Ambercita"
         thirdTiger.Age = 1
         thirdTiger.Breed = "Bengal"
         thirdTiger.image = UIImage(named: "SiberianTiger.jpg")
+        thirdTiger.chuffNumberOfTimes(4, isLoud: false)
         
         myTigers += [firstTiger, secondTiger, thirdTiger]
         
@@ -58,9 +61,18 @@ class ViewController: UIViewController {
     }
     
     func pickRandomTiger(){
-        let randomNumber = Int(arc4random_uniform(UInt32(myTigers.count)))
+        var randomNumber: Int
         
-        UIView.transitionWithView(self.view, duration: 2, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+        
+        // prevent any given tiger from showing up twice
+        
+        do{
+            randomNumber = Int(arc4random_uniform(UInt32(myTigers.count)))
+        } while currentIndex == randomNumber
+        
+        currentIndex = randomNumber
+        
+        UIView.transitionWithView(self.view, duration: 1, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
                 self.changeTigerInformation(self.myTigers, randomTiger: randomNumber)
             }, completion: {(finished: Bool) -> () in})
     }
