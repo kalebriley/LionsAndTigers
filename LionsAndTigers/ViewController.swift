@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var myImage: UIImageView!
     
     var myTigers:[Tiger] = []
-    var myLion: [Lion] = []
+    var myLions: [Lion] = []
+    var currentAnimal = (species: "Tiger", index: 0)
     var currentIndex = 0
     
     override func viewDidLoad() {
@@ -51,9 +52,16 @@ class ViewController: UIViewController {
         lion.name = "Mufasa"
         lion.subSpecies = "West African"
         
-        myTigers += [firstTiger, secondTiger, thirdTiger]
+        var lioness = Lion()
+        lioness.age = 1
+        lioness.image = UIImage(named: "Lioness.jpeg")
+        lioness.name = "Sheba"
+        lioness.subSpecies = "West African"
         
-        // generate random number
+        self.myTigers += [firstTiger, secondTiger, thirdTiger]
+        self.myLions += [lion, lioness]
+        
+        // generate random tiger
         self.pickRandomTiger()
      
     }
@@ -65,6 +73,19 @@ class ViewController: UIViewController {
     
     @IBAction func nextButtonPressed(sender: UIBarButtonItem){
         self.pickRandomTiger()
+    }
+    
+    func updateAnimal(){
+        switch currentAnimal {
+        case ("Tiger", _):
+            let randomNumber = Int(arc4random_uniform(UInt32(self.myLions.count)))
+            currentAnimal = ("Lion", randomNumber)
+        default:
+            let randomNumber = Int(arc4random_uniform(UInt32(self.myTigers.count)))
+            currentAnimal = ("Tiger", randomNumber)
+            break;
+            
+        }
     }
     
     func pickRandomTiger(){
