@@ -22,6 +22,7 @@
 		CE742BF31B0EDF9A0044CE52 /* Lioness.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE742BEB1B0EDF9A0044CE52 /* Lioness.jpeg */; };
 		CE742BF41B0EDF9A0044CE52 /* MalayanTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE742BEC1B0EDF9A0044CE52 /* MalayanTiger.jpg */; };
 		CE742BF51B0EDF9A0044CE52 /* SiberianTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE742BED1B0EDF9A0044CE52 /* SiberianTiger.jpg */; };
+		CEB340AB1B10EA290048DEA1 /* Lion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB340AA1B10EA290048DEA1 /* Lion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		CE742BEB1B0EDF9A0044CE52 /* Lioness.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lioness.jpeg; sourceTree = "<group>"; };
 		CE742BEC1B0EDF9A0044CE52 /* MalayanTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MalayanTiger.jpg; sourceTree = "<group>"; };
 		CE742BED1B0EDF9A0044CE52 /* SiberianTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SiberianTiger.jpg; sourceTree = "<group>"; };
+		CEB340AA1B10EA290048DEA1 /* Lion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				CE742BC11B0ED7E30044CE52 /* AppDelegate.swift */,
 				CE742BC31B0ED7E30044CE52 /* ViewController.swift */,
+				CEB340AA1B10EA290048DEA1 /* Lion.swift */,
 				CE742BE31B0ED8FA0044CE52 /* Tiger.swift */,
 				CE742BC51B0ED7E30044CE52 /* Main.storyboard */,
 				CE742BC81B0ED7E30044CE52 /* Images.xcassets */,
@@ -258,6 +261,7 @@
 				CE742BC41B0ED7E30044CE52 /* ViewController.swift in Sources */,
 				CE742BE41B0ED8FA0044CE52 /* Tiger.swift in Sources */,
 				CE742BC21B0ED7E30044CE52 /* AppDelegate.swift in Sources */,
+				CEB340AB1B10EA290048DEA1 /* Lion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +455,7 @@
 				CE742BDD1B0ED7E30044CE52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE742BDE1B0ED7E30044CE52 /* Build configuration list for PBXNativeTarget "LionsAndTigersTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +464,7 @@
 				CE742BE01B0ED7E30044CE52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var myImage: UIImageView!
     
     var myTigers:[Tiger] = []
+    var myLion: [Lion] = []
     var currentIndex = 0
     
     override func viewDidLoad() {
@@ -43,6 +44,12 @@ class ViewController: UIViewController {
         thirdTiger.Breed = "Bengal"
         thirdTiger.image = UIImage(named: "SiberianTiger.jpg")
         thirdTiger.chuffNumberOfTimes(4, isLoud: false)
+        
+        var lion = Lion()
+        lion.age = 3
+        lion.image = UIImage(named: "Lion.jpg")
+        lion.name = "Mufasa"
+        lion.subSpecies = "West African"
         
         myTigers += [firstTiger, secondTiger, thirdTiger]
         
