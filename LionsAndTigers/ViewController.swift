@@ -61,8 +61,9 @@ class ViewController: UIViewController {
         self.myTigers += [firstTiger, secondTiger, thirdTiger]
         self.myLions += [lion, lioness]
         
-        // generate random tiger
-        
+        // display random animal
+        self.updateAnimal()
+        self.updateView()
      
     }
 
@@ -72,7 +73,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(sender: UIBarButtonItem){
-        
+        self.updateAnimal()
+        self.updateView()
     }
     
     // function to update current animal
@@ -92,9 +94,11 @@ class ViewController: UIViewController {
     }
     
     func updateView () {
-        
+
         UIView.transitionWithView(self.view, duration: 2, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
             
+            
+            // Update view based on current animal
             if self.currentAnimal.species == "Tiger" {
                 let tiger = self.myTigers[self.currentAnimal.index]
                 self.myImage.image = tiger.image
@@ -111,6 +115,7 @@ class ViewController: UIViewController {
                 self.nameLabel.text = lion.name
                 
             }
+            // Will implement once lionCubs class is built
 //            else if self.currentAnimal.species == "LionCub" {
 //                let lionCub = self.lionCubs[self.currentAnimal.index]
 //                self.myImageView.image = lionCub.image
@@ -131,4 +136,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
