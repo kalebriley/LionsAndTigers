@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 
-struct Tiger {
-    var Age: Int = 0
+class Tiger {
+    var age: Int = 0
     var name: NSString = ""
-    var Breed: NSString = ""
+    var breed: NSString = ""
     var image: UIImage = UIImage(named: "")
     
     func chuff(){
@@ -37,7 +37,7 @@ struct Tiger {
         }
     }
     
-    static func ageOfTigersInTigerYears(ageInHumanYears: Int) -> Int{
+    func ageOfTigersInTigerYears(ageInHumanYears: Int) -> Int{
         let tigerAge = ageInHumanYears * 3
         return tigerAge
     }

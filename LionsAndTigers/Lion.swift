@@ -14,5 +14,5 @@ class Lion {
     var isAlphaMale = false
     var image = UIImage(named: "")
     var name = ""
-    var subSpecies = ""
+    var subspecies = ""
 }
