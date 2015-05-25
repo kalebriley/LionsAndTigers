@@ -20,4 +20,11 @@ class Lion {
         println("Roar!!!")
     }
     
+    func changeAlphaMale(){
+        if isAlphaMale {
+            isAlphaMale = false
+        }else{
+            isAlphaMale = true
+        }
+    }
 }

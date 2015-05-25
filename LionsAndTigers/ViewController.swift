@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     var myTigers:[Tiger] = []
     var myLions: [Lion] = []
-    var lionCubs: [String] = []
+    var lionCubs: [lionCub] = []
     var currentAnimal = (species: "Tiger", index: 0)
     var currentIndex = 0
     
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Create first tiger
+        // Create first tigerr.kaleb72@gmail.com
         var firstTiger = Tiger()
         firstTiger.name = "Tierra"
         firstTiger.age = 1
@@ -51,6 +51,8 @@ class ViewController: UIViewController {
         lion.image = UIImage(named: "Lion.jpg")
         lion.name = "Mufasa"
         lion.subspecies = "West African"
+        lion.changeAlphaMale()
+        println(lion.isAlphaMale)
         
         var lioness = Lion()
         lioness.age = 1
